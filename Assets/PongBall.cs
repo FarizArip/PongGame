@@ -29,7 +29,11 @@ public class PongBall : MonoBehaviour
 
     private Vector2 GenerateRandomDirection()
     {
-        float randomValue = Random.Range(0f, 2f * Mathf.PI * 360f);
+        float[,] degrees = {{-60f, 60f}, {120f, 240f}};
+        float chooseDirec = Random.Range(0, degrees.GetLength(0));
+        float minDeg = degrees[(int)chooseDirec, 0];
+        float maxDeg = degrees[(int)chooseDirec, 1];
+        float randomValue = Random.Range(minDeg, maxDeg) * Mathf.Deg2Rad;
         return new Vector2(Mathf.Cos(randomValue), Mathf.Sin(randomValue));
     }
 
@@ -38,6 +42,7 @@ public class PongBall : MonoBehaviour
         // Put the ball on random position in the center, then
         // push it to random direction
         rb.AddForce(GenerateRandomDirection() * speed * force);
+        rb.linearVelocity = rb.linearVelocity.normalized * speed;
     }
 
     // Update is called once per frame

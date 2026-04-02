@@ -5,7 +5,7 @@ using UnityEngine.InputSystem;
 public class Player : MonoBehaviour
 {
     // awalnya saya coba menggunakan langsung Input System Package, izinkan saya comment-out bagian-bagiannya agar berkemungkinan untuk dipakai lgi
-    float speed = 5f;
+    float speed = 10f;
     //public InputAction MoveAction;
     Rigidbody2D rb;
     Vector2 move;

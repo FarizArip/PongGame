@@ -9,7 +9,7 @@ public class NPCOpponent : MonoBehaviour
     PongBall ball;
     Vector3 ballPosition;
     [SerializeField] float minSpeed = 0.5f;
-    [SerializeField] float maxSpeed = 5f;
+    [SerializeField] float maxSpeed = 10f;
     //public Transform targetObject;
 
     void Start()

@@ -69,7 +69,7 @@ public class GameManager : MonoBehaviour
 
         // Put the ball on random position in the center, then 
         // push it to random direction
-        float yPos = Random.Range(-4.8f, 4.8f);
+        float yPos = Random.Range(-4.4f, 4.4f);
         ball.transform.position = new Vector3(0f, yPos);
         ball.gameObject.SetActive(true);
     }
